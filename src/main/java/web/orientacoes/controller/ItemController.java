@@ -1,4 +1,4 @@
-package web.orientacoes.controllers;
+package web.orientacoes.controller;
 
 import org.ocpsoft.rewrite.annotation.Join;
 import org.ocpsoft.rewrite.el.ELBeanName;
@@ -6,8 +6,8 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.annotation.Scope;
 import org.springframework.stereotype.Component;
 
-import web.orientacoes.models.Item;
-import web.orientacoes.models.ItemRepository;
+import web.orientacoes.model.Item;
+import web.orientacoes.model.ItemRepository;
 
 @Scope(value = "session")
 @Component(value = "itemController")
@@ -20,7 +20,7 @@ public class ItemController {
 	private Item item = new Item();
 
     public String save() {
-    	itemRepository.save(item);
+    	itemRepository.saveAndFlush(item);
         item = new Item();
         return "/item-list.xhtml?faces-redirect=true";
     }

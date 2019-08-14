@@ -1,4 +1,4 @@
-package web.orientacoes.controllers;
+package web.orientacoes.controller;
 
 import java.util.List;
 
@@ -11,13 +11,13 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.annotation.Scope;
 import org.springframework.stereotype.Component;
 
-import web.orientacoes.models.Item;
-import web.orientacoes.models.ItemRepository;
+import web.orientacoes.model.Item;
+import web.orientacoes.model.ItemRepository;
 
 @Scope (value = "session")
-@Component (value = "productList")
-@ELBeanName(value = "productList")
-@Join(path = "/", to = "/product-list.jsf")
+@Component (value = "itemListController")
+@ELBeanName(value = "itemListController")
+@Join(path = "/", to = "/item-list.jsf")
 public class ItemListController {
     @Autowired
     private ItemRepository itemRepository;

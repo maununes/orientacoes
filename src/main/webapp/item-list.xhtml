@@ -8,24 +8,20 @@
       xmlns:p="http://primefaces.org/ui">
 <ui:composition template="layout.xhtml">
     <ui:define name="content">
+    	<h:form id="itemForm">
+            <p:panel header="Item">
+                <h:panelGrid columns="1">
+                    <p:outputLabel for="nome" value="Nome: " />
+                    <p:inputText id="nome" value="#{itemController.item.nome}" />
+                    <h:commandButton value="Salvar" action="#{itemController.save}" />
+                </h:panelGrid>
+            </p:panel>
+        </h:form>
         <h:form id="form">
             <p:panel header="Lista de Itens">
                 <p:dataTable id="table" var="item" value="#{itemList.items}">
                     <p:column>
-                        <f:facet name="header"># Id</f:facet>
-                        <h:outputText value="#{item.id}" />
-                    </p:column>
-
-                    <p:column>
-                        <f:facet name="header">Name</f:facet>
                         <h:outputText value="#{item.nome}" />
-                    </p:column>
-
-                    <p:column>
-                        <f:facet name="header">Ativo</f:facet>
-                        <h:outputText value="#{item.ativo}">
-                            <f:convertNumber type="currency" currencySymbol="$ " />
-                        </h:outputText>
                     </p:column>
                 </p:dataTable>
             </p:panel>

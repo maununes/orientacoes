@@ -1,4 +1,4 @@
-package web.orientacoes.models;
+package web.orientacoes.model;
 import org.springframework.data.jpa.repository.JpaRepository;
 
 

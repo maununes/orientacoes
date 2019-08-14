@@ -1,4 +1,4 @@
-package web.orientacoes.models;
+package web.orientacoes.model;
 import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;

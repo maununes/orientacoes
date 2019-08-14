@@ -9,10 +9,8 @@
         <h:form id="itemForm">
             <p:panel header="Item">
                 <h:panelGrid columns="1">
-                    <p:outputLabel for="name" value="Name: " />
-                    <p:inputText id="name" value="#{itemController.item.nome}" />
-                    <p:outputLabel for="ativo" value="Ativo: " />
-                    <p:inputNumber id="ativo" value="#{itemController.item.ativo}" />
+                    <p:outputLabel for="nome" value="Nome: " />
+                    <p:inputText id="nome" value="#{itemController.item.nome}" />
                     <h:commandButton value="Salvar" action="#{itemController.save}" />
                 </h:panelGrid>
             </p:panel>
