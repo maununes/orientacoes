@@ -20,8 +20,9 @@ public class ItemController {
 	private Item item = new Item();
 
     public String save() {
-    	itemRepository.saveAndFlush(item);
+    	itemRepository.save(item);
         item = new Item();
+        System.out.println("ItemController save");
         return "/item-list.xhtml?faces-redirect=true";
     }
 

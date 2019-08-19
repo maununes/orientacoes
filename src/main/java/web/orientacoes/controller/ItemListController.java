@@ -29,6 +29,7 @@ public class ItemListController {
     @IgnorePostback
     public void loadData() {
     	items = itemRepository.findAll();
+    	System.out.println("ItemListController loadData");
     }
 
     public List<Item> getItems() {
