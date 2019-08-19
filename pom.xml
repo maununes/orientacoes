@@ -15,7 +15,7 @@
 	<description>TODO</description>
 
 	<properties>
-		<java.version>12</java.version>
+		<java.version>1.8</java.version>
 	</properties>
 
 	<dependencies>
@@ -100,6 +100,7 @@
         <processTypes>
           <web>java $JAVA_OPTS -cp target/classes:target/dependency/* Main</web>
         </processTypes>
+        <jdkVersion>1.8</jdkVersion>
       </configuration>
     </plugin>
 		</plugins>
