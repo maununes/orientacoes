@@ -3,33 +3,8 @@ drop table item if exists
 drop sequence hibernate_sequence if exists
 create sequence hibernate_sequence start with 1 increment by 1
 create table item (id bigint not null, ativo integer, nome varchar(255), primary key (id))
-INSERT INTO ITEM VALUES(1,1,'aaaaa')
+INSERT INTO ITEM VALUES(1,0,'kkkkkk')
 ALTER SEQUENCE PUBLIC.HIBERNATE_SEQUENCE RESTART WITH 2
 COMMIT
 DELETE FROM ITEM WHERE ID=1
-INSERT INTO ITEM VALUES(1,0,'aaaaa')
 COMMIT
-INSERT INTO ITEM VALUES(2,1,'ffffffff')
-ALTER SEQUENCE PUBLIC.HIBERNATE_SEQUENCE RESTART WITH 3
-COMMIT
-drop table item if exists
-drop sequence hibernate_sequence if exists
-DISCONNECT
-/*C4*/SET SCHEMA PUBLIC
-DISCONNECT
-/*C5*/SET SCHEMA PUBLIC
-DISCONNECT
-/*C6*/SET SCHEMA PUBLIC
-DISCONNECT
-/*C7*/SET SCHEMA PUBLIC
-DISCONNECT
-/*C8*/SET SCHEMA PUBLIC
-DISCONNECT
-/*C9*/SET SCHEMA PUBLIC
-DISCONNECT
-/*C10*/SET SCHEMA PUBLIC
-DISCONNECT
-/*C11*/SET SCHEMA PUBLIC
-DISCONNECT
-/*C12*/SET SCHEMA PUBLIC
-DISCONNECT
