@@ -17,7 +17,7 @@ import web.orientacoes.model.ItemRepository;
 @Scope (value = "session")
 @Component (value = "itemListController")
 @ELBeanName(value = "itemListController")
-@Join(path = "/", to = "/item-list.jsf")
+@Join(path = "/spring", to = "/item-list.jsf")
 public class ItemListController {
     @Autowired
     private ItemRepository itemRepository;
