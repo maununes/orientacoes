@@ -14,7 +14,15 @@ public class Item {
     @GeneratedValue(strategy = GenerationType.AUTO)
     private Long id;
 
-    @Column
+    public Long getId() {
+		return id;
+	}
+
+	public void setId(Long id) {
+		this.id = id;
+	}
+
+	@Column
     private String nome;
 
     @Column
@@ -25,7 +33,23 @@ public class Item {
     	this.ativo = 1;
     }
 
+	public String getNome() {
+		return nome;
+	}
+
+	public void setNome(String nome) {
+		this.nome = nome;
+	}
+
+	public int getAtivo() {
+		return ativo;
+	}
+
+	public void setAtivo(int ativo) {
+		this.ativo = ativo;
+	}
+
 	public Item() {
-		// TODO Auto-generated constructor stub
+		this.ativo = 1;
 	}
 }

@@ -21,6 +21,7 @@ public class OrientacoesApplication 	 {
 
 	public static void main(String[] args) {
 		SpringApplication.run(OrientacoesApplication.class, args);
+		int foo = 1;
 	}
 	
 	@Bean
