@@ -29,10 +29,10 @@ public class ItemListController {
     @IgnorePostback
     public void loadData() {
     	items = itemRepository.findAll();
-    	System.out.println("Itemns na lista: "+itemRepository.findAll().size());
     }
 
     public List<Item> getItems() {
+    	items = itemRepository.findAll();
         return items;
     }
 }

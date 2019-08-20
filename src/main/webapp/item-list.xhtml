@@ -9,16 +9,15 @@
 <ui:composition template="layout.xhtml">
     <ui:define name="content">
     	<h:form id="itemForm">
-            <p:panel header="Item">
+            <p:panel header="Tarefa">
                 <h:panelGrid columns="1">
-                    <p:outputLabel for="nome" value="Nome: " />
                     <p:inputText id="nome" value="#{itemController.item.nome}" />
-                    <h:commandButton value="Salvar" action="#{itemController.save}" />
+                    <h:commandButton value="Criar" action="#{itemController.save}" />
                 </h:panelGrid>
             </p:panel>
         </h:form>
         <h:form id="form">
-            <p:panel header="Lista de Itens">
+            <p:panel>
                 <p:dataTable id="table" var="item" value="#{itemList.items}">
                     <p:column>
                         <h:outputText value="#{item.nome}" />

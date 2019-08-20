@@ -7,11 +7,11 @@
 <ui:composition template="layout.xhtml">
     <ui:define name="content">
         <h:form id="itemForm">
-            <p:panel header="Item">
+            <p:panel >
                 <h:panelGrid columns="1">
-                    <p:outputLabel for="nome" value="Nome: " />
+                    <p:outputLabel for="nome" value="Tarefa: " />
                     <p:inputText id="nome" value="#{itemController.item.nome}" />
-                    <h:commandButton value="Salvar" action="#{itemController.save}" />
+                    <h:commandButton value="Criar" action="#{itemController.save}" />
                 </h:panelGrid>
             </p:panel>
         </h:form>

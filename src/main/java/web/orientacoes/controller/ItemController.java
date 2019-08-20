@@ -22,7 +22,6 @@ public class ItemController {
     public String save() {
     	itemRepository.save(item);
         item = new Item();
-        System.out.println("ItemController save");
         return "/item-list.xhtml?faces-redirect=true";
     }
 

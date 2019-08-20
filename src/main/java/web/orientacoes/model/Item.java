@@ -30,7 +30,7 @@ public class Item {
 
     public Item(String nome) {
     	this.nome = nome;
-    	this.ativo = 1;
+    	this.ativo = 0;
     }
 
 	public String getNome() {
@@ -50,6 +50,6 @@ public class Item {
 	}
 
 	public Item() {
-		this.ativo = 1;
+		this.ativo = 0;
 	}
 }
