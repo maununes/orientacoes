@@ -17,8 +17,9 @@ import web.orientacoes.model.ItemRepository;
 @Scope (value = "session")
 @Component (value = "itemListController")
 @ELBeanName(value = "itemListController")
-@Join(path = "/spring", to = "/item-list.jsf")
+@Join(path = "/", to = "/item-list.jsf")
 public class ItemListController {
+	
     @Autowired
     private ItemRepository itemRepository;
 
@@ -32,7 +33,6 @@ public class ItemListController {
     }
 
     public List<Item> getItems() {
-    	items = itemRepository.findAll();
         return items;
     }
 }
